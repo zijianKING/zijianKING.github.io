@@ -1,11 +1,11 @@
 ### your site title here
 
 title: Zijian Wang
-description: subtitle | affiliations | motto
+description: The Engineering Dude | University of Toronto
 
 baseurl: #name of GitHub repository
 url: "" #custom url to be used instead of GitHub repository
-email: #
+email: zijian2017@hotmail.com
 
 
 highlighter: rouge
@@ -17,12 +17,12 @@ permalink: /blog/:year/:title/
 paginate_path: /blog/page:num/
 
 # Social media links in footer
-facebook: "#"
-twitter: "#"
-linkedin: "https://www.linkedin.com/in/jian-toronto/"
-github: "#"
-researchgate: "#"
-orcid: "#"
+# facebook: ""
+# twitter: "#"
+linkedin: "jian-toronto/"
+github: "zijianKING"
+# researchgate: "#"
+# orcid: "#"
 
 highlighter: rouge
 markdown: kramdown
