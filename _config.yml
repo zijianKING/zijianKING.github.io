@@ -1,158 +1,69 @@
-# -----------------------------------------------------------------------------
-# Site settings
-# -----------------------------------------------------------------------------
+### your site title here
 
-title: blank # the website title (if blank, full name will be used instead)
-first_name: Zijian
-middle_name:
-last_name: Wang
-email: zijian2017@hotmail.com
-description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
-footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website  # add your own keywords or leave empty
+title: Your Name
+description: subtitle | affiliations | motto
 
-lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: 🔥 # the emoji used as the favicon
-url: https://zijianking.github.io # the base hostname & protocol for your site
-baseurl:  # the subpath of your site, e.g. /blog/
-last_updated: false # set to true if you want to display last updated in the footer
-impressum_path:  # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
+baseurl: /gradfolio #name of GitHub repository
+url: "" #custom url to be used instead of GitHub repository
+email: #
 
-# -----------------------------------------------------------------------------
-# RSS Feed
-# -----------------------------------------------------------------------------
-# will use title and url fields
-# Take a look to https://github.com/jekyll/jekyll-feed for more customization
 
-rss_icon: true
-
-# -----------------------------------------------------------------------------
-# Layout
-# -----------------------------------------------------------------------------
-
-navbar_fixed: true
-footer_fixed: true
-
-# Dimensions
-max_width: 800px
-
-# TODO: add layout settings (single page vs. multi-page)
-
-# -----------------------------------------------------------------------------
-# Open Graph & Schema.org
-# -----------------------------------------------------------------------------
-# Display links to the page with a preview object on social media.
-serve_og_meta: false # Include Open Graph meta tags in the HTML head
-serve_schema_org: false # Include Schema.org in the HTML head
-og_image: # The site-wide (default for all links) Open Graph preview image
-
-# -----------------------------------------------------------------------------
-# Social integration
-# -----------------------------------------------------------------------------
-
-github_username: # your GitHub user name
-gitlab_username: # your GitLab user name
-twitter_username: # your Twitter handle
-linkedin_username: # your LinkedIn user name
-scholar_userid: # your Google Scholar ID
-orcid_id: # your ORCID ID
-medium_username: # your Medium username
-quora_username: # your Quora username
-publons_id: # your ID on Publons
-research_gate_profile: # your profile on ResearchGate
-blogger_url: # your blogger URL
-work_url: # work page URL
-keybase_username: # your keybase user name
-wikidata_id: # your wikidata id
-dblp_url: # your DBLP profile url
-stackoverflow_id: #your stackoverflow id
-
-contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
-
-google_analytics:  # your google-analytics ID (format: UA-XXXXXXXXX)
-google_site_verification:  # your google-site-verification ID (Google Search Console)
-bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
-panelbear_analytics:  # panelbear analytics site ID (format: XXXXXXXXX)
-
-# -----------------------------------------------------------------------------
-# Blog
-# -----------------------------------------------------------------------------
-
-blog_name: al-folio  # your blog must have a name for it to show up in the nav bar
-blog_description: a simple whitespace theme for academics
-permalink: /blog/:year/:title/
+highlighter: rouge
+markdown: kramdown
 
 # Pagination
-pagination:
-  enabled: true
+paginate: 4
+permalink: /blog/:year/:title/
+paginate_path: /blog/page:num/
 
-# Comments
-disqus_shortname: al-folio # put your disqus shortname
-# https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+# Social media links in footer
+facebook: "#"
+twitter: "#"
+linkedin: "#"
+github: "#"
+researchgate: "#"
+orcid: "#"
 
-# -----------------------------------------------------------------------------
-# Collections
-# -----------------------------------------------------------------------------
+highlighter: rouge
+markdown: kramdown
 
+# Tracker
+analytics:
+
+#optimization -> compress.html
+compress_html:
+  clippings: [html,div, p, ul, td, h1, h2, h3, h4,link, meta, footer, nav, img, header, hr, br, head, style, li, ul, ol, time, main, script, title]
+  comments: ["<!-- ", " -->"]
+  endings: [all]
+  ignore:
+    envs: [local]
+  blanklines: false
+  profile: false
+  startings: []
+
+#collection
 collections:
-  news:
-    defaults:
-      layout: post
-    output: true
-    permalink: /news/:path/
   projects:
     output: true
     permalink: /projects/:path/
 
-news_limit: 5
+sass:
+  sass_dir: /assets/css/_sass
+  style: compressed
 
-# -----------------------------------------------------------------------------
-# Jekyll settings
-# -----------------------------------------------------------------------------
+include:
+  - _pages
 
-# Markdown and syntax highlight
-markdown: kramdown
-highlighter: rouge
-highlight_theme: github  # https://github.com/jwarby/jekyll-pygments-themes
-kramdown:
-  input: GFM
-  syntax_highlighter_opts:
-    css_class: 'highlight'
-    span:
-      line_numbers: false
-    block:
-      line_numbers: false
-      start_line: 1
-
-# Includes & excludes
-include: ['_pages']
 exclude:
-  - bin
-  - Gemfile
-  - Gemfile.lock
-  - vendor
-keep_files:
-  - CNAME
-  - .nojekyll
-  - .git
+  - README.md
+  - LICENSE.md
 
-# Plug-ins
 plugins:
-  - jekyll-archives
-  - jekyll-diagrams
+  - jekyll-seo-tag
+  - jekyll-paginate
   - jekyll-email-protect
-  - jekyll-feed
-  - jekyll-github-metadata
-  - jekyll-imagemagick
-  - jekyll-paginate-v2
-  - jekyll/scholar
-  - jekyll-sitemap
   - jekyll-target-blank
+<<<<<<< HEAD
   - jekyll-twitter-plugin
   - jemoji
 
@@ -312,3 +223,5 @@ medium_zoom:
   integrity: "sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM="
 
 theme: jekyll-theme-cayman
+=======
+>>>>>>> 2a2e509 (a new one)
